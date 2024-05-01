@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+	<head>
+		<title>Hot Beans Web</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		<style>
+			footer{
+				background-color:#525252;
+				text-align:center;
+			}
+			h2 {
+				text-align:center;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<div class="jumbotron text-center" style="margin-bottom:0; color:white; background-image:url(https://github.com/HotBeansWebGCS2024/web-assets/blob/main/londonbannernew.png?raw=true);">
+				<div class="container">
+					<h1>Hot Beans Web</h1>
+				</div>
+			</div>
+		</header>
+		<nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color:#056de3;">
+			<!-- Brand -->
+			<a class="navbar-brand" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\home.html">Hot Beans Web</a>
+
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\home.html">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							About Us
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\about-us.html">About Us</a>
+							<a class="dropdown-item" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\meet-the-team.html">Meet the Team</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\job-spec.html">Job Specification</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\application.html">Online Application</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\courses.html">Training Courses</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container" style="margin-top:30px; margin-bottom:30px;">
+		<h2>Application</h2>
+			<div class="row">
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-8">
+					<form>
+						<div class="form-group">
+							<label for="Title">Title:</label>
+							<input type="text" class="form-control" id="Title">
+							<label for="FName">First Name:</label>
+							<input type="text" class="form-control" id="FName">
+							<label for="LName">Last Name:</label>
+							<input type="text" class="form-control" id="LName">
+							<label for="NINumber">National Insurance Number:</label>
+							<input type="text" class="form-control" id="NINumber">
+							<label for="DOB">Date of Birth:</label>
+							<input type="text" class="form-control" id="DOB">
+							<label for="email">EMail:</label>
+							<input type="email" class="form-control" id="email">
+							<label for="Mtel">Mobile Telephone:</label>
+							<input type="tel" class="form-control" id="Mtel">
+							<label for="HTel">Home Telephone:</label>
+							<input type="text" class="form-control" id="HTel">
+							<label for="Add1">House Name/Number:</label>
+							<input type="text" class="form-control" id="Add1">
+							<label for="Add2">Street:</label>
+							<input type="text" class="form-control" id="Add2">
+							<label for="Add3">Town/City:</label>
+							<input type="text" class="form-control" id="Add3">
+							<label for="Add4">County:</label>
+							<input type="text" class="form-control" id="Add4">
+							<label for="Add5">Post Code:</label>
+							<input type="text" class="form-control" id="Add5">
+							<p>Are you eligible to work in the UK?</p>
+							<div class="form-check-inline">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" value="">Yes
+								</label>
+							</div>
+							<div class="form-check-inline">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" value="">No
+								</label>
+							</div>
+						</div>
+						<label for="Q1">Why do you want to work at Hot Beans Web?</label>
+						<textarea class="form-control" rows="5" id="Q1"></textarea>
+						<label for="Q2">What makes you think that you would be a good fit for this role?</label>
+						<textarea class="form-control" rows="5" id="Q2"></textarea>
+						<label for="Q3">What is your biggest professional achievement?</label>
+						<textarea class="form-control" rows="5" id="Q3"></textarea>
+						<p>Please attatch your CV below?</p>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="customFile">
+							<label class="custom-file-label" for="customFile">Choose file</label>
+						</div>
+					</form>
+
+					<script>
+						$(".custom-file-input").on("change", function() {
+							var fileName = $(this).val().split("\\").pop();
+							$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+						});
+					</script>
+					<br>
+					<p>In accordance with GDPR Legislation and the Data Protection Act (2018), all data submitted through the application form above will be kept in a secure server and will only be viewed by the authorised people involved with the application process. Please tick the box below to confirm you have read and understand this.</p>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" id="gdpr-check" value="">I confirm that I have read and understand the GDPR Notice.
+						</label>
+					</div>
+					<br>
+					<p id="demo"></p>
+					<button class="btn btn-outline-primary btn-block" onclick="alert('Application submitted successfuly.')">Submit!</button>
+					<script>
+						function myFunction() {
+							var x = document.getElementById("gdpr-check").required = true;
+							document.getElementById("demo").innerHTML = x;
+						}
+						
+						function validate(){
+							// get the checkbox element from the DOM using the getElementId function
+							let checkbox=document.getElementById("gdpr-check");
+							// get the text element to display the status of checkbox
+							let text=document.getElementById("confirm");
+							// use the checked property to check if the checkbox is checked
+							if (checkbox.checked){
+								// display result by assigning to innerHTML of the text element.
+								text.innerHTML="Thank you for accepting the agreement";
+							}
+							else{
+								text.innerHTML = "Please accept the agreement to proceed";
+							}
+						}
+					</script>
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div>
+		</div>
+		<footer style="margin-bottom:0px;">
+			<br>
+			<div class="container" style="margin-top:30px; margin-bottom:30px; color:white;">
+				<div class="row">
+					<div class="col-sm-4">
+						<h4>Legal</h4>
+						<a href="#">Privacy Policy</a>
+					</div>
+					<div class="col-sm-4">
+						<h4>Site Map</h4>
+						<ul style="padding-left:0px;">
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\home.html">Home</a></li>
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\about-us.html">About Us</a></li>
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\job-spec.html">Meet the Team</a></li>
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\meet-the-team.html">Job Specification</a></li>
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\application.html">Online Application</a></li>
+							<li style="list-style-type:none; margin:0px;"><a href="C:\Users\ben_r\OneDrive\Documents\College\Hot Beans Web\courses.html">Training Courses</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h4>Contact Details</h4>
+						<p>Telephone: 01234 567890</p>
+						<p>Email: </p><a href="mailto: info@hotbeansweb.com">info@hotbeansweb.com</a>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-12">
+						<p>&copy; Copyright Ben Rashbrook 2024</p>
+					</div>
+				</div>
+			</div>
+			<br>
+		</footer>
+	</body>
